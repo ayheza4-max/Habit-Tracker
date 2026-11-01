@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #333;
+}
+
+.app-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.app-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 20px;
+}
+
+.top-bar h1 {
+  font-size: 24px;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.clear-btn {
+  padding: 10px 18px;
+  background: #fee2e2;
+  color: #ef4444;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clear-btn:hover {
+  background: #fecaca;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.date-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.date-section label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #475569;
+}
+
+.date-section input {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  color: #0f172a;
+  outline: none;
+  cursor: pointer;
+}
+
+.add-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.add-form input {
+  padding: 12px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.add-form input:focus {
+  border-color: #3b82f6;
+}
+
+.add-btn {
+  padding: 12px 24px;
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background: #2563eb;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.habit-board {
+  min-width: 900px;
+  background: #ffffff;
+}
+
+.board-row {
+  display: flex;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background 0.15s;
+}
+
+.board-row:hover:not(.header-row) {
+  background: #f8fafc;
+}
+
+.board-row:last-child {
+  border-bottom: none;
+}
+
+.header-row {
+  background: #f1f5f9;
+  font-weight: bold;
+  color: #475569;
+}
+
+.habit-info-col {
+  flex: 2;
+  min-width: 220px;
+  padding: 16px 20px;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day-col {
+  flex: 1;
+  min-width: 80px;
+  padding: 12px 5px;
+  text-align: center;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.day-col:last-child {
+  border-right: none;
+}
+
+.date-text {
+  font-size: 12px;
+  font-weight: normal;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.habit-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.habit-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.habit-desc {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.del-btn {
+  background: transparent;
+  color: #cbd5e1;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.del-btn:hover {
+  color: #ef4444;
+  background: #fee2e2;
+}
+
+.status-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s, background 0.2s;
+}
+
+.status-icon:hover {
+  transform: scale(1.1);
+}
+
+.status-icon.done {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.status-icon.missed {
+  background: #f1f5f9;
+  color: #cbd5e1;
+}
+
+.status-icon.missed:hover {
+  background: #e2e8f0;
+  color: #94a3b8;
+}
+
+.empty-msg {
+  text-align: center;
+  padding: 50px 20px;
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .app-card {
+    padding: 20px;
+  }
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .add-form {
+    flex-direction: column;
+  }
+}

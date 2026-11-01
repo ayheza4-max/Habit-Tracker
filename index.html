@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <div class="app-card">
+      
+      <header class="top-bar">
+        <div>
+          <h1>My Habits</h1>
+          <p class="subtitle">Track your weekly progress</p>
+        </div>
+        <button id="clear-btn" class="clear-btn">Clear All</button>
+      </header>
+
+      <div class="controls">
+        <div class="date-section">
+          <label for="date-picker">Select Week:</label>
+          <input type="date" id="date-picker">
+        </div>
+        
+        <form id="add-form" class="add-form">
+          <input type="text" id="habit-name" placeholder="Habit Name" required>
+          <input type="text" id="habit-desc" placeholder="Description">
+          <button type="submit" class="add-btn">+ Add</button>
+        </form>
+      </div>
+      
+      <div class="table-container">
+        <div class="habit-board">
+          <div class="board-row header-row" id="header-row">
+            <div class="habit-info-col">Habit Details</div>
+          </div>
+          <div id="habits-container"></div>
+        </div>
+        <p id="empty-msg" class="empty-msg">Nothing here yet. Add a habit to get started!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
